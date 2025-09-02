@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root{
+
+  /* colors */
   --white: #ffffff;
   --black: #000000;
   --gray-100: #E1E1E6;
@@ -9,8 +11,14 @@
   --gray-600: #323238;
   --gray-700: #29292E;
 
+  /*backgrounds*/
+  --purple: #880ffa;
+  --redStrong: #ff3f5f;
+  --redLight: #fa889f;
 
+  /* radius */
   --radius1: 30px;
+  --radius2: 20px;
 
   /*texto*/
   --font-xs: 0.75rem;
