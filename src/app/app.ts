@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { HomePageComponent } from "./components/home-page/home-page/home-page.component";
 
 @Component({
