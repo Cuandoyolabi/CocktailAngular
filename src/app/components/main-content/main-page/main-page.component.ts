@@ -9,18 +9,16 @@ import { LogicService } from '../../../services/logic.service';
 })
 export class MainPageComponent implements OnInit {
 
-  items: any[] = [];
+  cocktails: any[] = [];
 
   constructor(private logicService: LogicService){}
 
   ngOnInit(): void {
     this.logicService.cocktails$.subscribe(data => {
-      this.items = data || [];
+      this.cocktails = data || [];
+      console.log("Esta es la informacion this.items: ", this.cocktails)
     })
-
-    //console.log("Esta es la informacion this.items: ", this.items)
   }
-
 
 
 }

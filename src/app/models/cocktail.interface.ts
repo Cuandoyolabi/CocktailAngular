@@ -1,5 +1,5 @@
 
-interface Cocktail {
+export interface Cocktail {
 
   idDrink: string;
   nombreDrink: string;

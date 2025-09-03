@@ -18,9 +18,6 @@ export class HeaderPageComponent {
     buscar(): void {
       if(!this.searchTerm) return;
       this.cocktailService.buscarCocktail(this.searchTerm);
-
-      console.log("Esta es la informacion de los cocteles: ", this.cocktails)
-      console.log("Esta es la informacion de la busqueda: ", this.searchTerm)
     }
 }
 
