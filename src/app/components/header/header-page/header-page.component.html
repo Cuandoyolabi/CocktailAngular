@@ -9,6 +9,8 @@
       class="text-lg color-[var-(--gray-400)] text-gray-500 outline-none"
       type="text"
       placeholder="Busca una bebida..."
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="buscar()"
     />
     <svg
       xmlns="http://www.w3.org/2000/svg"
