@@ -2,10 +2,10 @@
 <section class="w-[100%] h-[68%] flex justify-center items-center">
 
   <div class="w-[99%] h-[95%] bg-[var(--redLight)] rounded-[var(--radius2)]
-    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 md:grid-rows-3 gap-3">
+    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-rows-2 md:grid-rows-2 gap-3">
 
-    @for (item of cocktails; track $index){
-        <div class="w-[90%] h-[92%] bg-white border-1 m-auto border-gray-400 rounded-[var(--radius2)]">
+    @for (item of logicService.cocktails$ | async; track $index){
+        <div class="w-[100%] h-[100%] bg-white border-1 m-auto border-gray-400 rounded-[var(--radius2)]">
 
         <img src="{{item.strDrinkThumb}}" alt="{{item.strDrink}}"
           class="w-[100%] h-[70%] rounded-[var(--radius2)] object-cover cursor-pointer"/>

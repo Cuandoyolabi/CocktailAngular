@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { LogicService } from '../../../services/logic.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-main-page',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './main-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -11,7 +12,7 @@ export class MainPageComponent implements OnInit {
 
   cocktails: any[] = [];
 
-  constructor(private logicService: LogicService){}
+  constructor(public logicService: LogicService){}
 
   ngOnInit(): void {
     this.logicService.cocktails$.subscribe(data => {
