@@ -1,8 +1,8 @@
 
 export interface Cocktail {
 
-  idDrink: string;
-  nombreDrink: string;
+  id: string;
+  nombre: string;
   alcohol: string;
   tipoDeVaso: string;
   instrucciones: string;

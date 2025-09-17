@@ -19,9 +19,26 @@ export class LogicService {
     const url = `${this.baseUrl}${nombre}`;
     console.log("Esta es la URL: ", url);
 
-    this.http.get<{ drinks: Cocktail[] }>(url).subscribe({
+    this.http.get<{ drinks: any[] }>(url).subscribe({
 
-      next: (data) => this.cocktailSource.next(data.drinks),
+      next: (data) => {
+        const cocktails = (data.drinks || []).map(drink => ({
+          id: drink.id,
+          nombre: drink.strDrink,
+          alcohol: drink.strAlcoholic,
+          tipoDeVaso: drink.strGlass,
+          instrucciones: drink.strInstructions,
+          imagen: drink.strDrinkThumb,
+          ingredientes: [
+            drink.strIngredient1,
+            drink.strIngredient2,
+            drink.strIngredient3,
+            drink.strIngredient4,
+            drink.strIngredient5,
+          ].filter(Boolean)
+        }));
+        this.cocktailSource.next(cocktails)
+      },
 
       error: (error) => {
         console.error('Error fetching cocktails:', error);

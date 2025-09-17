@@ -13,8 +13,10 @@
 
   /*backgrounds*/
   --purple: #880ffa;
+  --purpleLight: #e1c7fa;
   --redStrong: #ff3f5f;
   --redLight: #fa889f;
+  --pinkLight: #facad4;
 
   /* radius */
   --radius1: 30px;
