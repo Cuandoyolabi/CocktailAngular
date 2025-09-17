@@ -7,9 +7,9 @@
     @for (item of logicService.cocktails$ | async; track $index){
         <div class="w-[100%] h-[100%] bg-white border-1 m-auto border-gray-400 rounded-[var(--radius2)]">
 
-        <img src="{{item.strDrinkThumb}}" alt="{{item.strDrink}}"
+        <img src="{{item.imagen}}" alt="{{item.nombreDrink}}"
           class="w-[100%] h-[70%] rounded-[var(--radius2)] object-cover cursor-pointer"/>
-          <h3>{{ item.strDrink }}</h3>
+          <h3>{{ item.nombreDrink }}</h3>
         </div>
       }
 
