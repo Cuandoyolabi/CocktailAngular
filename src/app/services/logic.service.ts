@@ -14,6 +14,13 @@ export class LogicService {
   cocktails$ = this.cocktailSource.asObservable();
   constructor(private http: HttpClient) {}
 
+  private selectedCocktailSource = new BehaviorSubject<Cocktail | null>(null);
+  selectedCocktail$= this.selectedCocktailSource.asObservable();
+
+  selectCocktail(cocktail: Cocktail){
+    this.selectedCocktailSource.next(cocktail);
+  }
+
   buscarCocktail(nombre: string): any {
 
     const url = `${this.baseUrl}${nombre}`;

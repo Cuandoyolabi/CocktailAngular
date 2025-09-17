@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LogicService } from '../../../services/logic.service';
 import { AsyncPipe } from '@angular/common';
 
@@ -20,6 +21,4 @@ export class MainPageComponent implements OnInit {
       console.log("Esta es la informacion this.items: ", this.cocktails)
     })
   }
-
-
 }
