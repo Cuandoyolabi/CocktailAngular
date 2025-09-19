@@ -9,12 +9,11 @@
     <ng-container *ngIf="logicService.selectedCocktail$ | async as cocktail">
       <div class="w-full h-full">
         <img [src]="cocktail.imagen" [alt]="cocktail.nombre" class="w-full rounded-[var(--radius2)] object-contain">
-        <p><strong>Alcohol: </strong>{{ cocktail.alcohol }}</p>
+        <p class=""><strong>Alcohol: </strong>{{ cocktail.alcohol }}</p>
         <p><strong>Tipo de vaso: </strong>{{ cocktail.tipoDeVaso }}</p>
         <p><strong>Instrucciones: </strong>{{ cocktail.instrucciones }}</p>
         <p><strong>Ingredientes: </strong>{{ cocktail.ingredientes }}</p>
       </div>
     </ng-container>
   </div>
-
 </section>
