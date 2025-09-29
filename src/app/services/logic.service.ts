@@ -10,7 +10,7 @@ export class LogicService {
 
   private baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
-  private cocktailSource = new BehaviorSubject<Cocktail[]>([]);
+  private cocktailSource = new BehaviorSubject<Cocktail[] | null>(null);
   cocktails$ = this.cocktailSource.asObservable();
   constructor(private http: HttpClient) {}
 

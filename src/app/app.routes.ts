@@ -10,6 +10,7 @@ export const routes: Routes = [
     path: '',
     component: HomePageComponent,
     children: [
+      { path: '', component: MainPageComponent},
       { path: 'main', component: MainPageComponent},
       { path: 'random', component: RandomDrinkComponent },
       { path: 'favorite', component: FavoriteComponent},

@@ -5,9 +5,15 @@
     grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-5
     overflow-y-auto">
 
+    @if((logicService.cocktails$ | async ) === null){
+      <p class="text-gray-500 text-lg text-center w-full">Busca algo...</p>
+    }
+    @else if((logicService.cocktails$ | async)?.length === 0){
+      <p class="text-gray-500 text-lg text-center w-full">No hay resultados de tu busqueda</p>
+    }
+
     @for (item of logicService.cocktails$ | async; track $index){
         <div class="w-auto h-[100%] bg-white border-1 border-gray-400 rounded-[var(--radius2)]">
-
           <img src="{{item.imagen}}" alt="{{item.nombre}}"
             class="w-full rounded-[var(--radius2)] object-contain cursor-pointer"
             (click)="logicService.selectCocktail(item)"
@@ -15,6 +21,5 @@
           <h3 class="text-center">{{ item.nombre }}</h3>
         </div>
       }
-
   </div>
 </section>

@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-page',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [ ],
   templateUrl: './nav-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
