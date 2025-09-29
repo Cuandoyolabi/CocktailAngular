@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-page',
-  imports: [ ],
+  imports: [RouterLink, RouterModule],
   templateUrl: './nav-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
