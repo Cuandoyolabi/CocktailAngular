@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ModalService } from '../../../services/modal.service';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-page',
@@ -9,10 +8,12 @@ import { ModalService } from '../../../services/modal.service';
 })
 export class NavPageComponent {
 
-  constructor(public modalService : ModalService){}
+  @Output() cambioDeContenido = new EventEmitter<'random' | 'favorites'>();
 
-  abrirModal(){
-    this.modalService.open();
+  cambiarContenido(tab: 'random' | 'favorites'){
+    this.cambioDeContenido.emit(tab);
   }
+
+
 
 }
